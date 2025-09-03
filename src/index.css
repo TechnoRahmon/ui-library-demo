@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@source "./node_modules/blink-ui/**/*.{js,ts,jsx,tsx}";
+@import "blink-ui/styles.css";
 
 /* Additional styles for blink-ui components */
 :root {
