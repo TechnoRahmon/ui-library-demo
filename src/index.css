@@ -6,15 +6,154 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Light theme (default) */
+:root,
+:root.light {
+  color-scheme: light;
+  color: #213547;
+  background-color: #ffffff;
+  
+  /* Override blink-ui theme variables for light mode */
+  --component-button-primary-default-bg: #5727da;
+  --component-button-primary-default-fg: #f7f4fd;
+  --component-button-primary-hover-bg: #7047e0;
+  --component-button-primary-hover-fg: #f7f4fd;
+  --component-button-primary-pressed-bg: #461fae;
+  --component-button-primary-pressed-fg: #e6dff9;
+  --component-button-primary-focused-bg: #5727da;
+  --component-button-primary-focused-fg: #f7f4fd;
+  --component-button-primary-disabled-bg: #574ddf4d;
+  --component-button-primary-disabled-fg: #ab93ec;
+  
+  --component-button-secondary-default-bg: #e0e1f6;
+  --component-button-secondary-default-fg: #0a0b15;
+  --component-button-secondary-hover-bg: #e0e1f6;
+  --component-button-secondary-hover-fg: #14152a;
+  --component-button-secondary-pressed-bg: #c0c4ed;
+  --component-button-secondary-pressed-fg: #14152a;
+  --component-button-secondary-focused-bg: #e0e1f6;
+  --component-button-secondary-focused-fg: #0a0b15;
+  --component-button-secondary-disabled-bg: #7d92dc1a;
+  --component-button-secondary-disabled-fg: #c0c4ed;
+  
+  --component-button-tertiary-default-bg: #f9f9f9;
+  --component-button-tertiary-default-fg: #6b6b6b;
+  --component-button-tertiary-hover-bg: #fff;
+  --component-button-tertiary-hover-fg: #6b6b6b;
+  --component-button-tertiary-pressed-bg: #f4f4f4;
+  --component-button-tertiary-pressed-fg: #4a4a4a;
+  --component-button-tertiary-focused-bg: #f9f9f9;
+  --component-button-tertiary-focused-fg: #6b6b6b;
+  --component-button-tertiary-focused-border: #c9c9c9;
+  
+  /* Toast/Alert/Surface variables for light mode */
+  --semantic-surface-neutral-level02: #f4f4f4;
+  --semantic-surface-contextual-default: #fff;
+  --semantic-surface-contextual-canvas: #f4f4f4;
+  --semantic-surface-contextual-subtle: #f4f4f4;
+  --semantic-surface-contextual-elevated: rgba(255, 255, 255, 0.7);
+  
+  --semantic-content-title: #3d3d3d;
+  --semantic-content-body: #8c8c8c;
+  --semantic-content-caption: #a5a5a5;
+  --semantic-content-muted: #c9c9c9;
+  
+  --semantic-informative-border-neutral: #e4e4e4;
+  --semantic-informative-foreground-success-standard: #739f22;
+  --semantic-informative-foreground-info-standard: #0064b8;
+  --semantic-informative-foreground-warning-standard: #bf8e2a;
+  --semantic-informative-foreground-danger-standard: #963e37;
+  --semantic-informative-foreground-neutral-standard: #c9c9c9;
+  
+  --semantic-informative-background-success: #dcf1af;
+  --semantic-informative-background-info: #b4ccff;
+  --semantic-informative-background-warning: #ffe6b1;
+  --semantic-informative-background-danger: #e7b5ae;
+  --semantic-informative-background-neutral-inverse: #f4f4f4;
+  
+  --semantic-brand-primary: #5727da;
+}
+
+/* Dark theme */
+:root.dark {
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  
+  /* Override blink-ui theme variables for dark mode */
+  --component-button-primary-default-bg: #fff;
+  --component-button-primary-default-fg: #1a1a1a;
+  --component-button-primary-hover-bg: #fff;
+  --component-button-primary-hover-fg: #404040;
+  --component-button-primary-pressed-bg: #fff;
+  --component-button-primary-pressed-fg: #737373;
+  --component-button-primary-focused-bg: #d9d9d9;
+  --component-button-primary-focused-fg: #737373;
+  --component-button-primary-disabled-bg: lch(100 0 none/0.7);
+  --component-button-primary-disabled-fg: #737373;
+  
+  --component-button-secondary-default-bg: #1a1a1a;
+  --component-button-secondary-default-fg: #d1d1d1;
+  --component-button-secondary-hover-bg: #313131;
+  --component-button-secondary-hover-fg: #d1d1d1;
+  --component-button-secondary-pressed-bg: #171717;
+  --component-button-secondary-pressed-fg: #767676;
+  --component-button-secondary-focused-bg: #1a1a1a;
+  --component-button-secondary-focused-fg: #a3a3a3;
+  --component-button-secondary-disabled-bg: lch(9.2632 0 none/0.7);
+  --component-button-secondary-disabled-fg: #484848;
+  
+  --component-button-tertiary-default-bg: #1a1a1a;
+  --component-button-tertiary-default-fg: #e4e4e4;
+  --component-button-tertiary-hover-bg: #2e2e2e;
+  --component-button-tertiary-hover-fg: #f4f4f4;
+  --component-button-tertiary-pressed-bg: #0f0f0f;
+  --component-button-tertiary-pressed-fg: #c9c9c9;
+  --component-button-tertiary-focused-bg: #1a1a1a;
+  --component-button-tertiary-focused-fg: #e4e4e4;
+  --component-button-tertiary-focused-border: #8c8c8c;
+  
+  /* Toast/Alert/Surface variables for dark mode */
+  --semantic-surface-neutral-level02: #2e2e2e;
+  --semantic-surface-contextual-default: #2e2e2e;
+  --semantic-surface-contextual-canvas: #1a1a1a;
+  --semantic-surface-contextual-subtle: #3d3d3d;
+  --semantic-surface-contextual-elevated: rgba(46, 46, 46, 0.9);
+  
+  --semantic-content-title: #fff;
+  --semantic-content-body: #e4e4e4;
+  --semantic-content-caption: #c9c9c9;
+  --semantic-content-muted: #a5a5a5;
+  
+  --semantic-informative-border-neutral: #4a4a4a;
+  --semantic-informative-foreground-success-standard: #dcf1af;
+  --semantic-informative-foreground-info-standard: #b4ccff;
+  --semantic-informative-foreground-warning-standard: #ffe6b1;
+  --semantic-informative-foreground-danger-standard: #af4841;
+  --semantic-informative-foreground-neutral-standard: #f4f4f4;
+  
+  --semantic-informative-background-success: #9cda2480;
+  --semantic-informative-background-info: #0087fe80;
+  --semantic-informative-background-warning: #ffc33280;
+  --semantic-informative-background-danger: #b24841b3;
+  --semantic-informative-background-neutral-inverse: rgba(244, 244, 244, 0.7);
+  
+  --semantic-brand-primary: #fff;
+}
+
+/* Body styles to ensure proper background */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: inherit;
+  color: inherit;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Ensure proper font loading for icons if used in badges */
